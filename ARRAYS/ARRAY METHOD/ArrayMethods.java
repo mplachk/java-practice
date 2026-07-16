@@ -29,15 +29,14 @@ public class ArrayMethods {
     }
 
 //a. Swap the first and last elements in the array.
-    /** a. Swaps the first and last elements. */
     public void swapFirstAndLast() {
         int last = values.length - 1;
         int temp = values[0];
         values[0] = values[last];
         values[last] = temp;
     }
-//b. Shift all elements to the right by one and move the last element into the first position. For example, 1 4 9 16 25 would be transformed into 25 1 4 9 16.
-    /** b. Shifts every element right by one, wrapping the last element to the front. */
+//b. Shift all elements to the right by one and move the last element into the first position. 
+//For example, 1 4 9 16 25 would be transformed into 25 1 4 9 16.
     public void shiftRight() {
         int last = values[values.length - 1];
         for (int i = values.length - 1; i > 0; i--) {
@@ -47,7 +46,6 @@ public class ArrayMethods {
     }
 
 //c. Replace all even elements with 0.
-    /** c. Replaces every even element with 0. */
     public void replaceEvenWithZero() {
         for (int i = 0; i < values.length; i++) {
             if (values[i] % 2 == 0) {
@@ -57,7 +55,6 @@ public class ArrayMethods {
     }
 
 //d. Replace each element except the first and last by the larger of its two neighbors.
-    /** d. Replaces each interior element with the larger of its two neighbors. */
     public void replaceWithLargerNeighbor() {
         int[] result = new int[values.length];
         result[0] = values[0];
@@ -69,7 +66,6 @@ public class ArrayMethods {
         values = result;
     }
 //e. Remove the middle element if the array length is odd, or the middle two elements if the length is even.
-    /** e. Removes the middle element (odd length) or middle two elements (even length). */
     public void removeMiddle() {
         int removeCount = (values.length % 2 == 0) ? 2 : 1;
         int startRemove = (values.length - removeCount) / 2;
@@ -86,7 +82,6 @@ public class ArrayMethods {
     }
 
 //f. Move all even elements to the front, otherwise preserving the order of the Elements.
-    /** f. Moves even elements to the front, preserving relative order otherwise. */
     public void moveEvensToFront() {
         int[] result = new int[values.length];
         int j = 0;
@@ -107,7 +102,6 @@ public class ArrayMethods {
     }
 
 //g. Return the second-largest element in the array.
-    /** g. Returns the second-largest element in the array. */
     public int secondLargest() {
         int largest = Math.max(values[0], values[1]);
         int second = Math.min(values[0], values[1]);
@@ -124,7 +118,6 @@ public class ArrayMethods {
     }
 
 //h. Return true if the array is currently sorted in increasing order.
-    /** h. Returns true if the array is sorted in increasing order. */
     public boolean isSorted() {
         for (int i = 1; i < values.length; i++) {
             if (values[i] < values[i - 1]) {
@@ -135,7 +128,6 @@ public class ArrayMethods {
     }
 
 //i. Return true if the array contains two adjacent duplicate elements.
-    /** i. Returns true if the array has two adjacent duplicate elements. */
     public boolean hasAdjacentDuplicates() {
         for (int i = 1; i < values.length; i++) {
             if (values[i] == values[i - 1]) {
@@ -146,7 +138,6 @@ public class ArrayMethods {
     }
 
 //j. Return true if the array contains duplicate elements (which need not be adjacent).
-    /** j. Returns true if the array contains any duplicate elements. */
     public boolean hasDuplicates() {
         for (int i = 0; i < values.length; i++) {
             for (int j = i + 1; j < values.length; j++) {
