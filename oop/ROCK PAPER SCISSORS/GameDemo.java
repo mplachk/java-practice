@@ -1,3 +1,16 @@
+/** This is the class that will use the GameFunctions class you created.
+ * In the main method:
+ * • Instantiate a GameFunctons object.
+ * • Prompt the user to enter their choice. Reject any values other than "rock", "paper", or
+ *     "scissors" by displaying an error message and prompt the user to re-enter their choice.
+ *     • Uppercase/lowercase letters should be ignored.
+ * • Call the GameFunctions object's choose method so that is selects the computer's choice.
+ * • Pass the user's choice as the argument to the GameFunctions object's whoWon method.
+ *     • Based on the String value returned by this method, print the winner.
+ * • Ask the user if they would like to play again. If they choose to play again, start the game over from the beginning.
+ *     • Allow Y or y to restart the game.
+ */
+
 import java.util.Scanner;
 
 public class GameDemo
